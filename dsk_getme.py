@@ -3,7 +3,7 @@ import pandas as pd
 from io import StringIO
 
 def cleaner(uploaded_file):
-    # data_raw=pd.read_excel(r'C:\Users\fuad.ak\Documents\getme fev 2025.xlsx', sheet_name=3,header=[1])#.rename(columns={'Unnamed: 0':'No'})
+    # data_raw=pd.read_excel(r'getme fev 2025.xlsx', sheet_name=3,header=[1])#.rename(columns={'Unnamed: 0':'No'})
     data_raw=uploaded_file
     data_raw.drop(columns='Unnamed: 1',inplace=True)
     # data_raw.rename(columns={'Unnamed: 0':'Ölkələr',},inplace=True)
@@ -38,6 +38,6 @@ if uploaded_file is not None:
     st.write(cleaner(data_raw).head())
     
 
-# data_raw=pd.read_excel(r'C:\Users\fuad.ak\Documents\getme fev 2025.xlsx', sheet_name=3, header=[1])
+# data_raw=pd.read_excel(r'getme fev 2025.xlsx', sheet_name=3, header=[1])
 
     
