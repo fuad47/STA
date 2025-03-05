@@ -35,7 +35,7 @@ def cleaner(uploaded_file,year,month):
 
 st.subheader('DSK fayl transformeri')
 st.write('Getme melumatlari olan excel faylını bura atın və çıxan nəticəni endirin.')
-uploaded_file = st.file_uploader("Choose a file")
+uploaded_file = st.file_uploader("Hesabat sənədini yükləyin")
 date=st.date_input('Hesabat tarixini seçin')
 year=date.year
 month=date.month
