@@ -36,13 +36,14 @@ def cleaner(uploaded_file,year,month):
 st.subheader('DSK fayl transformeri')
 st.write('Getme melumatlari olan excel faylını bura atın və çıxan nəticəni endirin.')
 uploaded_file = st.file_uploader("Hesabat sənədini yükləyin")
+sheet=
 date=st.date_input('Hesabat tarixini seçin')
 year=date.year
 month=date.month
+sheet=st.number_input('Sheet no:',value=0)
 if uploaded_file is not None:
-
     # Can be used wherever a "file-like" object is accepted:
-    data_raw = pd.read_excel(uploaded_file,sheet_name=3,header=[1])
+    data_raw = pd.read_excel(uploaded_file,sheet_name=sheet,header=[1])
     st.subheader("Uploaded Table:")
     st.write(data_raw)
     st.divider()
